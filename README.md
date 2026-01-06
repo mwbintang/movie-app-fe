@@ -1,4 +1,4 @@
-# movie-app-be
+# movie-app-fe
 
 ## Requirements
 - Node.js (>=24.0.0)
