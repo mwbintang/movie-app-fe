@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* body {
-    background-color: #d8e4e4;
-} */
-
 @layer base {
   body {
     @apply bg-[#d8e4e4] text-gray-900 antialiased;

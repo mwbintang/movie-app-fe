@@ -18,8 +18,9 @@ export interface MovieDetailResponse {
     data: Movie;
 }
 
-export const getMoviesV1 = async (page: number = 1): Promise<MoviesResponse> => {
-    return ApiClient<MoviesResponse>(`v1/movies?page=${page}`, 'GET');
+export const getMoviesV1 = async (page: number = 1, search: string = ""): Promise<MoviesResponse> => {
+    const url = search ? `v1/movies?page=${page}&title=${search}` : `v1/movies?page=${page}`;
+    return ApiClient<MoviesResponse>(url, 'GET');
 };
 
 export const getMovieByIdV1 = async (id: number | string): Promise<MovieDetailResponse> => {
